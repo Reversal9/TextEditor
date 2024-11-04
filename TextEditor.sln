@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp4", "WpfApp4\WpfApp4.csproj", "{5C9A1D9A-01F0-43B1-84B5-403271AD84CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{1E5DDC05-456B-482D-8BC8-74B4F71815A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5C9A1D9A-01F0-43B1-84B5-403271AD84CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C9A1D9A-01F0-43B1-84B5-403271AD84CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C9A1D9A-01F0-43B1-84B5-403271AD84CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C9A1D9A-01F0-43B1-84B5-403271AD84CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E5DDC05-456B-482D-8BC8-74B4F71815A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E5DDC05-456B-482D-8BC8-74B4F71815A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E5DDC05-456B-482D-8BC8-74B4F71815A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E5DDC05-456B-482D-8BC8-74B4F71815A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
