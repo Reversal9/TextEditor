@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.PieceTable;
+﻿namespace ClassLibrary1.PieceTable;
 
 public interface IPieceTable
 {
@@ -7,22 +7,22 @@ public interface IPieceTable
     /// </summary>
     /// <param name="idx"></param>
     /// <param name="text"></param>
-    void insert(int idx, string text);
+    void Insert(int idx, string text);
 
     /// <summary>
-    /// Deletes the substring from begin to end (excluded). [begin, end).
+    /// Deletes the substring from begin up to the given length to delete.
+    /// </summary>
+    /// <param name="begin"></param>
+    /// <param name="length"></param>
+    void Delete(int begin, int length);
+
+    /// <summary>
+    /// Replaces the substring from begin up to the given length with replacement string. The replacement string can be of any length.
     /// </summary>
     /// <param name="begin"></param>
     /// <param name="end"></param>
-    void delete(int begin, int end);
-
-    /// <summary>
-    /// Replaces the substring [begin, end) with replacement string. The replacement string can be of any length.
-    /// </summary>
-    /// <param name="begin"></param>
-    /// <param name="end"></param>
-    /// <param name="replacement"></param>
-    void replace(int begin, int end, string replacement);
+    /// <param name="length"></param>
+    void Replace(int begin, int length, string replacement);
 
     /// <summary>
     /// Renders the text given the piece list

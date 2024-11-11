@@ -1,6 +1,6 @@
-﻿using WinFormsApp1.Constants;
+﻿using ClassLibrary1.Constants;
 
-namespace WinFormsApp1.PieceTable;
+namespace ClassLibrary1.PieceTable;
 
 public class Piece
 {

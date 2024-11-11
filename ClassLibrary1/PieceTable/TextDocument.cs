@@ -1,6 +1,4 @@
-﻿namespace WpfApp4;
-
-using System.IO;
+﻿namespace ClassLibrary1.PieceTable;
 
 public class TextDocument
 {

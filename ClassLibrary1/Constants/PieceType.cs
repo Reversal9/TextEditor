@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Constants;
+﻿namespace ClassLibrary1.Constants;
 
 public enum PieceType
 {
