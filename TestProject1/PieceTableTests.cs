@@ -25,6 +25,47 @@ public class PieceTableTests
     }
 
     [TestMethod]
+    public void TestInsertionBetweenPieces()
+    {
+        String originalBuffer = "Hello World";
+        PieceTable pieceTable = new PieceTable(originalBuffer);
+
+        String firstTextToInsert = "Cats";
+        pieceTable.Insert(originalBuffer.Length, firstTextToInsert);
+
+        String secondTextToInsert = "Dogs";
+        pieceTable.Insert(originalBuffer.Length, secondTextToInsert);
+
+        String actual = pieceTable.RenderText();
+        String expected = originalBuffer + secondTextToInsert + firstTextToInsert;
+
+        Assert.AreEqual(
+            actual,
+            expected,
+            "The text is not being inserted properly between two pieces."
+        );
+    }
+
+    [TestMethod]
+    public void TestInsertionInsideAPiece()
+    {
+        String originalBuffer = "Hello World";
+        PieceTable pieceTable = new PieceTable(originalBuffer);
+
+        String textToInsert = "Developing";
+        pieceTable.Insert(5, textToInsert);
+
+        String actual = pieceTable.RenderText();
+        String expected = "HelloDevelopingWorld";
+
+        Assert.AreEqual(
+            actual,
+            expected,
+            "The text is not being inserted properly inside a piece."
+        );
+    }
+
+    [TestMethod]
     public void TestDeleteFromEmptyBuffer()
     {
         String originalBuffer = "";
@@ -121,8 +162,6 @@ public class PieceTableTests
         PieceTable pieceTable = new PieceTable(originalBuffer);
 
         pieceTable.Delete(5, 6);
-
-        Console.WriteLine(pieceTable.ToString());
 
         String actual = pieceTable.RenderText();
         String expected = "Hello!";
