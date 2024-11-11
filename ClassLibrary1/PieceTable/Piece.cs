@@ -32,4 +32,9 @@ public class Piece
         this.start = start;
         this.length = length;
     }
+
+    public override string ToString()
+    {
+        return String.Format($"[Piece({source}, {start}, {length})]");
+    }
 }

@@ -66,7 +66,7 @@ public class PieceTableTests
         String originalBuffer = "Hello World!";
         PieceTable pieceTable = new PieceTable(originalBuffer);
 
-        pieceTable.Delete(0, 6);
+        pieceTable.Delete(-4, 10); // left side is out of bounds
 
         String actual = pieceTable.RenderText();
         String expected = "World!";
@@ -84,7 +84,7 @@ public class PieceTableTests
         String originalBuffer = "Hello World!";
         PieceTable pieceTable = new PieceTable(originalBuffer);
 
-        pieceTable.Delete(5, 7);
+        pieceTable.Delete(5, 10); // right side is out of bounds
 
         String actual = pieceTable.RenderText();
         String expected = "Hello";
@@ -121,6 +121,8 @@ public class PieceTableTests
         PieceTable pieceTable = new PieceTable(originalBuffer);
 
         pieceTable.Delete(5, 6);
+
+        Console.WriteLine(pieceTable.ToString());
 
         String actual = pieceTable.RenderText();
         String expected = "Hello!";

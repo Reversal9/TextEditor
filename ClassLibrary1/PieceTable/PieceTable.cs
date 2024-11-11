@@ -65,7 +65,7 @@ public class PieceTable : IPieceTable
                     piece.Length = begin - piece.Start;
 
                     // add right_piece with length pieceEnd - deleteEnd
-                    Piece rightPiece = new Piece(PieceType.ADD_BUFFER, end, pieceEnd - deleteEnd);
+                    Piece rightPiece = new Piece(piece.Source, end, pieceEnd - deleteEnd);
                     _pieces.Add(rightPiece);
                 }
             }
@@ -95,5 +95,19 @@ public class PieceTable : IPieceTable
         }
 
         return result;
+    }
+
+    // Only for debugging purposes
+    public override string ToString()
+    {
+        string pieces = "";
+
+        foreach (Piece piece in _pieces)
+        {
+            pieces += piece.ToString();
+            pieces += "\n";
+        }
+
+        return pieces;
     }
 }
